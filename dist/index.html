@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <main id="main" data-theme="light">
+      <div id="playNameContainer">
+        <div id="player1Container">
+          <label for="player1">Player 1 name:</label>
+          <input type="text" name="player1" id="player1" class="namesInput" />
+        </div>
+        <div id="startButtonDiv">
+          <button type="button" id="startButton">Start</button>
+        </div>
+        <div id="chooseContainer">
+          <p id="playerNameChoose"></p>
+          <div id="chooseBtnContainer">
+            <div class="xForm optionBtns" data-option="X"></div>
+            <p>or</p>
+            <div class="circle optionBtns" data-option="circle"></div>
+          </div>
+        </div>
+        <div id="showWinner"></div>
+        <div id="showCurrentPlayer"></div>
+        <div id="player2Container">
+          <label for="player2">Player 2 name:</label>
+          <input type="text" name="player2" id="player2" class="namesInput" />
+        </div>
+      </div>
+      <section id="gameSection">
+        <div id="gameOptionsContainer">
+          <div class="chosenPlace" data-position="topLeft" data-status="enabled"></div>
+          <div class="chosenPlace" data-position="top" data-status="enabled"></div>
+          <div class="chosenPlace" data-position="topRight" data-status="enabled"></div>
+          <div class="chosenPlace" data-position="left" data-status="enabled"></div>
+          <div class="chosenPlace" data-position="middle" data-status="enabled"></div>
+          <div class="chosenPlace" data-position="right" data-status="enabled"></div>
+          <div class="chosenPlace" data-position="bottomLeft" data-status="enabled"></div>
+          <div class="chosenPlace" data-position="bottom" data-status="enabled"></div>
+          <div class="chosenPlace" data-position="bottomRight" data-status="enabled"></div>
+        </div>
+      </section>
+      <div id="btnContainer"><button id="restartButton">Restart game</button></div>
+      <div id="themeSwitcher"><button>Switch Dark/ Light theme</button></div>
+    </main>
+    <script src="./script.min.js" type="module"></script>
+  </body>
+</html>
