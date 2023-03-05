@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+:root {
+  --background-btn: rgb(25, 28, 27);
+  --color-white: white;
+  --options-container-color: rgb(40, 41, 41);
+  --dark-btn-hover: rgb(44, 49, 48);
+  --chosen-place-hover: rgb(245, 245, 243);
+  --color-black: black;
+  --win-color: rgb(118, 212, 113);
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--color-white);
+}
+
+#playNameContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+  font-size: 20px;
+  align-items: center;
+  color: var(--color-black);
+}
+#player1Container,
+#player2Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#player1Container > label,
+#player2Container > label {
+  font-size: 18px;
+}
+
+.namesInput {
+  margin: 0 10px;
+}
+
+#gameSection {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gameOptionsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  background-color: var(--options-container-color);
+}
+
+.chosenPlace {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-color: var(--color-white);
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#showCurrentPlayer {
+  text-align: center;
+  font-weight: bold;
+  font-size: 28px;
+  display: none;
+}
+
+#startButtonDiv,
+#btnContainer {
+  display: flex;
+  justify-content: center;
+}
+
+#startButtonDiv > button,
+#restartButton {
+  padding: 1rem 2rem;
+  color: var(--color-white);
+  border: none;
+  background-color: var(--background-btn);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#btnContainer {
+  display: none;
+}
+
+#startButtonDiv > button:hover,
+#themeSwitcher > button:hover {
+  background-color: var(--dark-btn-hover);
+}
+
+#themeSwitcher {
+  position: absolute;
+  display: block;
+  justify-content: end;
+  right: 10px;
+  bottom: 10px;
+}
+
+#themeSwitcher > button {
+  padding: 1rem 2rem;
+  color: var(--color-white);
+  border: none;
+  background-color: var(--background-btn);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#player1,
+#player2 {
+  background-color: var(--color-white);
+  border-color: var(--color-black);
+  color: var(--color-black);
+}
+
+.xForm {
+  clip-path: polygon(16% 0, 0% 20%, 35% 50%, 0% 80%, 22% 98%, 50% 62%, 79% 99%, 100% 80%, 64% 50%, 100% 20%, 80% 0%, 50% 38%);
+  background-color: var(--color-black);
+  width: 40px;
+  height: 40px;
+}
+
+.circle {
+  clip-path: circle(50% at 50% 50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+  border: 8px solid var(--color-black);
+  border-radius: 100%;
+}
+
+#chooseContainer {
+  display: none;
+  text-align: center;
+}
+
+#playerNameChoose {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+
+#chooseBtnContainer {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+#chooseBtnContainer div {
+  cursor: pointer;
+}
+
+#showWinner {
+  font-weight: bold;
+  font-size: 32px;
+  display: none;
+  color: var(--color-black);
+}
+
+.win {
+  background-color: var(--win-color);
+}
+
+@media (max-width: 767.98px) {
+  #player1Container {
+    order: 1;
+  }
+
+  #player2Container {
+    order: 2;
+  }
+
+  #startButtonDiv {
+    order: 3;
+  }
+
+  #playNameContainer {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
